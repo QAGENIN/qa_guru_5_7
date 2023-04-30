@@ -12,7 +12,7 @@ def test_csv_file():
         csvwriter.writerow(['Anna', 'Pavel', 'Peter'])
         csvwriter.writerow(['Alex', 'Serj', 'Yana'])
 
-    with open('../resources/eggs.csv') as csvfile:
+    with open(csv_path_to_file) as csvfile:
         csvreader = csv.reader(csvfile)
         for row in csvreader:
             assert len(row) == 3
